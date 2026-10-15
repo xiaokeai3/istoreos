@@ -2263,10 +2263,8 @@ define Device/nradio_wt9104
   DEVICE_VENDOR := NRadio
   DEVICE_MODEL := WT9104 (C8-688)
   
-  # 注意：带了 nradio 子目录
   DEVICE_DTS := nradio/mt7981-nradio-wt9104
   
-  # 硬件基础驱动，保命用的，绝对不能删
   DEVICE_PACKAGES := \
     kmod-mt7915e \
     kmod-mt7981-firmware \
@@ -2277,6 +2275,7 @@ define Device/nradio_wt9104
     kmod-dsa-mt7531 \
     kmod-phy-realtek
   
-  SUPPORTED_DEVICES := hcmt7981-emmc nradio,c8-688 hc,wt9104 nradio,wt9104
+  SUPPORTED_DEVICES := hcmt7981-emmc nradio,c8-688 nradio,wt9104
 endef
 TARGET_DEVICES += nradio_wt9104
+
